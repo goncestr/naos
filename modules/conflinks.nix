@@ -16,7 +16,7 @@ in
        recursive = true;
      };
      "fuzzel" = {
-       source = "${.confD}/fuzzel
+       source = "${.confD}/fuzzel;
        recursive = true;
      };
   };
