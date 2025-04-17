@@ -18,6 +18,8 @@
 
   programs.hyprland.enable = true;
 
+  services.displayManager.sddm.enable = true;
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -32,7 +34,7 @@
   time.timeZone = "Europe/Istanbul";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "tr_TR.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "tr_TR.UTF-8";
@@ -48,10 +50,6 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Enable the Deepin Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.deepin.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -118,6 +116,7 @@
        "neovim"
 #       "home-manager"
        "hyprland"
+       "font-awesome"
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

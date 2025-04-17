@@ -1,8 +1,8 @@
 { config, lib, ... }:
 
 let
-  homeDir = config.home.homeDirectory;
-  naosDir = "${homeDir}/naos";
+  hmdir = "/home/asus";
+  naosDir = "${hmdir}/naos";
   confD = "${naosDir}/.config";
 in 
   {
@@ -16,7 +16,7 @@ in
        recursive = true;
      };
      "fuzzel" = {
-       source = "${.confD}/fuzzel;
+       source = "${confD}/fuzzel";
        recursive = true;
      };
   };

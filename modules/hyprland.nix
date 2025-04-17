@@ -1,12 +1,12 @@
 { config, pkgs, ... }:
 
 let
-  confD = "${config.home.homeDirectory}/naos/.config";
-  hycd= "${confD}/hypr";
+  hmdir = "/home/asus";
+  confD = "${hmdir}/naos/.config";
      
      configDirs = {
        "waybar" = "${confD}/waybar";
-       "hypr" = "${hycd}";
+       "hypr" = "${confD}/hypr";
        };
        
 in {
